@@ -1,3 +1,4 @@
+"""
 def calcFactorial(number):
     counter = number
     test = number
@@ -10,10 +11,6 @@ def calcFactorial(number):
         counter -= 1
         if counter == 2:
             print(total)
+calcFactorial(100)
+"""
 
-   
-
-    
-
-    
-calcFactorial(100)       
