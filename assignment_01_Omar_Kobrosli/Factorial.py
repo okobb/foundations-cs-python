@@ -1,5 +1,6 @@
 """
-def calcFactorial(number):
+def calcFactorial():
+    number = int(input("Please input your number: "))
     counter = number
     test = number
     while counter > 1:
@@ -10,7 +11,7 @@ def calcFactorial(number):
         test = total
         counter -= 1
         if counter == 2:
-            print(total)
-calcFactorial(100)
+            print("Output: ",total)
+calcFactorial()
 """
 

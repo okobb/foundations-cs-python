@@ -1,5 +1,6 @@
-"""""
-def findDivisors(number): 
+"""
+def findDivisors(): 
+    number = int(input("Please input your number: "))
     list = [1, ]
     counter = 1
     while counter < number:
@@ -16,5 +17,5 @@ def findDivisors(number):
 
 
 
-findDivisors(1)
+findDivisors()
 """
