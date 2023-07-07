@@ -1,4 +1,4 @@
-
+"""
 def checkIP():
     IP = input("Enter IP address: ")
     split = IP.split(".")
@@ -19,3 +19,4 @@ def checkIP():
                 print("Valid IP address.")
 
 checkIP()
+"""
