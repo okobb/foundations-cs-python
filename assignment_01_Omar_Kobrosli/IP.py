@@ -1,4 +1,4 @@
-"""
+
 def checkIP():
     IP = input("Enter IP address: ")
     split = IP.split(".")
@@ -8,10 +8,8 @@ def checkIP():
     else:
         for octet in split:
             counter = 0
-            valid = True
             number = int(octet) 
             if (number < 0 or number > 255) or (len(octet) > 1 and octet[0] == "0"):
-                valid = False
                 print("Invalid IP addresss.")
                 counter += 1
                 break
@@ -19,4 +17,3 @@ def checkIP():
                 print("Valid IP address.")
 
 checkIP()
-"""
