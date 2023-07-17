@@ -37,18 +37,21 @@ def main():
     '''
 
     def countTags (code, tag):
-        split = code.split()
-        code = split
-        list = []
-        if len(split) != 0:
-          if tag in code:
-            list.append(tag) 
-            split.pop(0)
-            print(split)
-            return countTags(code,tag)
-          else:
-            return countTags(code,tag)
-    print(countTags("hi im omar hi how ru hi", "hi"))
+        if (len(code) == 0 or len(code) < len(tag)):
+            return 0
+ 
+        # Recursive Case
+        # Checking if the first
+        # tag matches
+        if (code[0 : len(tag)] == tag):
+            return countTags(code[1:],tag) + 1
+ 
+    # Otherwise, return the count
+    # from the remaining index
+        else:
+            return countTags(code[1:],tag)
+    print(countTags("<html> <head> <title>My Website</title>"
+    , "<title>"))
 
 
 
