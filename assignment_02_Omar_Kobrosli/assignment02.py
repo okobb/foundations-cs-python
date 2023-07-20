@@ -1,12 +1,23 @@
 def main():
-    #def menu():
-        #choice = int(print("1. Count Digits\n"
-        #    + "3. Count Tags\n"
-        #      + "4. Exit\n"
-        #     + "- - - - - - - - -\n"
-        #     + "Enter a choice:"))
-    #menu()
-
+    """
+    def menu():
+        choice = int(print("1. Count Digits\n"
+            + "2. Find Max\n" 
+           + "3. Count Tags\n"
+             + "4. Exit\n"
+            + "- - - - - - - - -\n"
+             + "Enter a choice:"))
+        if choice == 1:
+            countDigits()
+        elif choice == 2:
+            findMax():
+        elif choice == 3:
+            countTags()
+        else:
+            exitProgram
+            
+    menu()
+    """
     """
     def countDigits(num):
         if num < 0 :
@@ -18,7 +29,7 @@ def main():
             return "Output: ",result
     print(countDigits(-9))
     """
-
+    
     '''
     def findMax(list,length):
         if list == []:
@@ -35,7 +46,7 @@ def main():
 
     print(findMax([],0))
     '''
-
+    """
     def countTags (code, tag):
         if (len(code) == 0 or len(code) < len(tag)):
             return 0
@@ -52,7 +63,10 @@ def main():
             return countTags(code[1:],tag)
     print(countTags("<html> <head> <title>My Website</title>"
     , "<title>"))
-
+    
+    def exitProgram():
+        return "Thank you for checking my program."
+    """
 
 
 main()
