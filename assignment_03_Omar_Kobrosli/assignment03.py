@@ -1,3 +1,4 @@
+"""
 def sumTuples():
     counter = 0
 
@@ -24,8 +25,22 @@ def sumTuples():
     print("First tuple is: ",tuple1)
     print("Second tuple is: ",tuple2)
     print("Output: ",total1)
-    
-    
-
 sumTuples()
+"""
+
+def exportJson(dictionary,file):
+    file = open(file, "w")
+    text = str(dictionary)
+    text1 = text.replace("'",'"')
+    file.write(text1)
+    file.close()
+exportJson({"year" : 2020}, "json.txt")
+
+def importJson(file):
+    file = open(file)
+    text = file.read()
+    
+    print(text)
+    file.close()
+importJson("json.txt")
         
