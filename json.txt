@@ -1,1 +1,1 @@
-{"year": 2020}
+{"name": "John Doe", "age": 30, "email": "johndoe@example.com", "address": {"city": "New York", "zip": "10001"}, "interests": ["reading", "traveling", "coding"]}

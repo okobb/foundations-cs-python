@@ -28,19 +28,43 @@ def sumTuples():
 sumTuples()
 """
 
+"""
 def exportJson(dictionary,file):
     file = open(file, "w")
+    #changing the dictionary into a string to be a valid JSON format
     text = str(dictionary)
     text1 = text.replace("'",'"')
     file.write(text1)
     file.close()
-exportJson({"year" : 2020}, "json.txt")
+exportJson({
+    "name": "John Doe",
+    "age": 30,
+    "email": "johndoe@example.com",
+    "address": {
+        "city": "New York",
+        "zip": "10001"
+    },
+    "interests": ["reading", "traveling", "coding"]
+    }, "json.txt")
+"""
 
 def importJson(file):
     file = open(file)
     text = file.read()
+    # changing string into dictionary
+    text = text.replace('{' , '')
+    text = text.replace('}' , '')
     
-    print(text)
+    newdict = dict((a.strip(), b.strip())  
+        for a, b in (element.split(':')  
+            for element in text.split(', ')))
+    
+                
+
+    res = {key.replace('"', ''):val for key, val in newdict.items()}
+    #printing converted dictionary  
+    print(res)
+    print(type(res))
     file.close()
 importJson("json.txt")
         
